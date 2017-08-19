@@ -48,52 +48,19 @@ header("location:error.php");
     
 	<div class="panel-heading" style="background-color:#2CB094"><h4>Administrador:<?php /* echo $_SESSION["nombre"]." ".$_SESSION["apellido"]*/?></h4></div>
     
-	<div class="panel-body" align="center" >
-	<h2>Agregar usuario</h2>
+	<div class="panel-body" align="center" style="width:400px; margin:auto" >
+	<h2>Agregar dias festivos </h2>
 	
   	<form class="form-horizontal" action="insertar_est.php" role="form" method="POST">
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="id">Identificacion:</label>
+  		
+	<div class="form-group">
+      <label class="control-label col-sm-2" for="nombre" style="width:200px">Numero de dias festivos:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" name="id" placeholder="Ingrese numero de identificacion">
+        <input type="number" class="form-control" name="nombre">
       </div>
     </div>
-		
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="nombre">Nombre:</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" name="nombre" placeholder="Ingrese nombre">
-      </div>
-    </div>
-    
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">Contraseña:</label>
-      <div class="col-sm-10">
-	  <input type="password" class="form-control" name="pwd" placeholder="Ingrese contraseña">
-	  </div>
-    </div>
-	
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="grado">Tipo de usuario:</label>
-      <div class="col-sm-10">
-        <select class="form-control" name="grado">
-        <option>Administrador</option>
-        <option>Despachador</option>
-      </select>
-      </div>
-    </div>
-	
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="grupo">Estado:</label>
-      <div class="col-sm-10">
-        <select class="form-control" name="grupo">
-        <option>Activo</option>
-        <option>Inactivo</option>
-      </select>
-      </div>
-    </div>
-		
-    <button type="submit" class="btn btn-warning">Guardar</button>
+    	
+    <button type="submit" class="btn btn-warning">Continuar</button>
 	 </form>
 </div>  
 	
