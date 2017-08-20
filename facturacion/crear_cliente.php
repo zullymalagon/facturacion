@@ -49,11 +49,11 @@ header("location:error.php");
 	<div class="panel-body" align="center">
 	<h2>Agregar cliente</h2>
 	
-  	<form class="form-inline" action="crear_calificacion2.php" role="form" method="POST">
+  	<form class="form-inline" action="insertar_cliente.php" role="form" method="POST">
    	
 	 
 	<div class="form-group">
-      <label  for="grado">Tipo de identificación:</label>
+      <label  for="tipo_id">Tipo de identificación:</label>
       <div class="form-group">
         <select class="form-control" name="tipo_id" >
           <option>Cedula de ciudadania</option>
@@ -71,53 +71,53 @@ header("location:error.php");
 	
 	<br><br>
 	<div class="form-group">
-      <label for="id">Nombre:</label>
+      <label for="nombre">Nombre:</label>
       <div class="form-group">
-        <input type="text" class="form-control" name="id3">
+        <input type="text" class="form-control" name="nombre">
       </div>
     </div>
 	&nbsp&nbsp&nbsp
 	<div class="form-group">
-      <label for="id">Apellido:</label>
+      <label for="apellido">Apellido:</label>
       <div class="form-group">
-        <input type="text" class="form-control" name="id2"  style="width:250px">
+        <input type="text" class="form-control" name="apellido"  style="width:250px">
       </div>
     </div>
 	&nbsp&nbsp&nbsp
 	<div class="form-group">
-      <label for="id">Empresa:</label>
+      <label for="empresa">Empresa:</label>
       <div class="form-group">
-        <input type="text" class="form-control" name="id">
+        <input type="text" class="form-control" name="empresa">
       </div>
     </div>
 	
 <br>
 	<br>
 	<div class="form-group">
-      <label for="id">Telefono:</label>
+      <label for="telefono">Telefono:</label>
       <div class="form-group">
-        <input type="text" class="form-control" name="id3">
+        <input type="text" class="form-control" name="telefono">
       </div>
     </div>
 	&nbsp&nbsp&nbsp
 	<div class="form-group">
-      <label for="id">Telefono alterno:</label>
+      <label for="tel_alt">Telefono alterno:</label>
       <div class="form-group">
-        <input type="text" class="form-control" name="id2" >
+        <input type="text" class="form-control" name="tel_alt" >
       </div>
     </div>
 	&nbsp&nbsp&nbsp
 	<div class="form-group">
-      <label for="id">Dirección:</label>
+      <label for="direccion">Dirección:</label>
       <div class="form-group">
-        <input type="text" class="form-control" name="id">
+        <input type="text" class="form-control" name="direccion">
       </div>
     </div>
 	
 	<br><br>
 	
 	<div class="form-group">
-      <label  for="descripcion">Observaciones:</label>
+      <label  for="observaciones">Observaciones:</label>
 	  <div class="form-group">
 	    <textarea class="form-control" rows="3" name="observaciones" style="width:500px"></textarea>
 	  </div>
@@ -127,7 +127,7 @@ header("location:error.php");
 
 	<br>
 	<br>
-    <button type="submit" class="btn btn-warning">Siguente</button>
+    <button type="submit" class="btn btn-warning">Guardar</button>
 	 </form>
 </div>  
 	

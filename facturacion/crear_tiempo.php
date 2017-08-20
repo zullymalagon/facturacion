@@ -49,47 +49,24 @@ header("location:error.php");
 	<div class="panel-heading" style="background-color:#2CB094"><h4>Administrador:<?php /* echo $_SESSION["nombre"]." ".$_SESSION["apellido"]*/?></h4></div>
     
 	<div class="panel-body" align="center" >
-	<h2>Agregar usuario</h2>
+	<h2>Agregar tiempo</h2>
 	
-  	<form class="form-horizontal" action="insertar_usuario.php" role="form" method="POST">
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="id">Identificacion:</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" name="id">
-      </div>
-    </div>
-		
+  	<form class="form-horizontal" action="insertar_est.php" role="form" method="POST">
+    		
 	<div class="form-group">
       <label class="control-label col-sm-2" for="nombre">Nombre:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" name="nombre">
+        <input type="text" class="form-control" name="nombre" placeholder="Ingrese nombre">
       </div>
     </div>
-    
+ 		
 	<div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">Contraseña:</label>
+      <label class="control-label col-sm-2" for="grupo">Estado:</label>
       <div class="col-sm-10">
-	  <input type="password" class="form-control" name="pwd">
-	  </div>
-    </div>
-	
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="tipo">Tipo de usuario:</label>
-      <div class="col-sm-10">
-        <select class="form-control" name="tipo">
-        <option>Administrador</option>
-        <option>Despachador</option>
-      </select>
-      </div>
-    </div>
-	
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="estado">Estado:</label>
-      <div class="col-sm-10">
-        <select class="form-control" name="estado">
-        <option selected>Activo</option>
+        <select class="form-control" name="grupo">
+        <option>Activo</option>
         <option>Inactivo</option>
-        </select>
+      </select>
       </div>
     </div>
 		

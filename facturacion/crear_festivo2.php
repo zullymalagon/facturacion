@@ -51,14 +51,23 @@ header("location:error.php");
 	<div class="panel-body" align="center" style="width:400px; margin:auto" >
 	<h2>Agregar dias festivos </h2>
 	
-  	<form class="form-horizontal" action="crear_festivo2.php" role="form" method="POST">
-  		
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="nombre" style="width:200px">Numero de dias festivos:</label>
+	<?php
+	$numero=$_POST['numero'];
+	?>
+  	
+	<form class="form-horizontal" action="insertar_est.php" role="form" method="POST">
+  	
+		<?php for ($i = 1; $i <= $numero; $i++) { ?>
+   
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="nombre">Fecha:</label>
       <div class="col-sm-10">
-        <input type="number" class="form-control" name="numero">
+        <input type="date" class="form-control" name="<?php echo "nombre".$i ?> ">
       </div>
-    </div>
+	</div>
+	<?php } ?>
+
+			
     	
     <button type="submit" class="btn btn-warning">Continuar</button>
 	 </form>

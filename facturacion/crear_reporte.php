@@ -48,51 +48,18 @@ header("location:error.php");
     
 	<div class="panel-heading" style="background-color:#2CB094"><h4>Administrador:<?php /* echo $_SESSION["nombre"]." ".$_SESSION["apellido"]*/?></h4></div>
     
-	<div class="panel-body" align="center" >
-	<h2>Agregar usuario</h2>
+	<div class="panel-body" align="center" style="width:600px; margin:auto" >
+	<h2>Agregar reporte </h2>
 	
-  	<form class="form-horizontal" action="insertar_usuario.php" role="form" method="POST">
+  	<form class="form-horizontal" action="insertar_est.php" role="form" method="POST">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="id">Identificacion:</label>
+      <label class="control-label col-sm-2" for="id">Reporte:</label>
       <div class="col-sm-10">
         <input type="text" class="form-control" name="id">
       </div>
     </div>
 		
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="nombre">Nombre:</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" name="nombre">
-      </div>
-    </div>
-    
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">Contraseña:</label>
-      <div class="col-sm-10">
-	  <input type="password" class="form-control" name="pwd">
-	  </div>
-    </div>
-	
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="tipo">Tipo de usuario:</label>
-      <div class="col-sm-10">
-        <select class="form-control" name="tipo">
-        <option>Administrador</option>
-        <option>Despachador</option>
-      </select>
-      </div>
-    </div>
-	
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="estado">Estado:</label>
-      <div class="col-sm-10">
-        <select class="form-control" name="estado">
-        <option selected>Activo</option>
-        <option>Inactivo</option>
-        </select>
-      </div>
-    </div>
-		
+    	
     <button type="submit" class="btn btn-warning">Guardar</button>
 	 </form>
 </div>  
