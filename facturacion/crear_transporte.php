@@ -51,18 +51,18 @@ header("location:error.php");
 	<div class="panel-body" align="center" style="width:600px; margin:auto" >
 	<h2>Agregar trayecto</h2>
 	
-  	<form class="form-horizontal" action="insertar_est.php" role="form" method="POST">
+  	<form class="form-horizontal" action="insertar_transporte.php" role="form" method="POST">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="id">Trayecto:</label>
+      <label class="control-label col-sm-2" for="trayecto">Trayecto:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" name="id">
+        <input type="text" class="form-control" name="trayecto">
       </div>
     </div>
 		
 	<div class="form-group">
-      <label class="control-label col-sm-2" for="nombre">Valor:</label>
+      <label class="control-label col-sm-2" for="valor">Valor:</label>
       <div class="col-sm-10">
-        <input type="number" class="form-control" name="nombre">
+        <input type="number" class="form-control" name="valor">
       </div>
     </div>
     	
