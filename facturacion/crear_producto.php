@@ -51,21 +51,45 @@ header("location:error.php");
 	<div class="panel-body" align="center" style="width:600px; margin:auto" >
 	<h2>Agregar producto</h2>
 	
-  	<form class="form-horizontal" action="insertar_est.php" role="form" method="POST">
+  	<form class="form-horizontal" action="insertar_producto.php" role="form" method="POST">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="id">Producto:</label>
+      <label class="control-label col-sm-2" for="producto">Producto:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" name="id">
+        <input type="text" class="form-control" name="producto">
       </div>
     </div>
 		
 	<div class="form-group">
-      <label class="control-label col-sm-2" for="nombre">Cantidad inicial :</label>
+      <label class="control-label col-sm-2" for="cantidad">Cantidad inicial :</label>
       <div class="col-sm-10">
-        <input type="number" class="form-control" name="nombre">
+        <input type="number" class="form-control" name="cantidad">
       </div>
     </div>
+	
+	<div style="width:300px; margin:auto">
+	<h4> Valores </h4>
     	
+	<div class="form-group">
+      <label class="control-label col-sm-2" for="dia">Dia:</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" name="dia" style="width:200px">
+      </div>
+    </div>
+	
+	<div class="form-group">
+      <label class="control-label col-sm-2" for="semana">Semana:</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" name="semana" style="width:200px">
+      </div>
+    </div>
+	
+	<div class="form-group">
+      <label class="control-label col-sm-2" for="mes">Mes:</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" name="mes" style="width:200px">
+      </div>
+    </div>
+	</div>
     <button type="submit" class="btn btn-warning">Guardar</button>
 	 </form>
 </div>  
