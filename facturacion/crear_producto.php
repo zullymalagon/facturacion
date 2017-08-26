@@ -66,27 +66,27 @@ header("location:error.php");
       </div>
     </div>
 	
-	<div style="width:300px; margin:auto">
-	<h4> Valores </h4>
+	<div style="width:600px; margin:auto">
+	<h4>Precio</h4>
     	
 	<div class="form-group">
-      <label class="control-label col-sm-2" for="dia">Dia:</label>
+      <label class="control-label col-sm-2" for="rango1">De 1 a 3 dias:</label>
       <div class="col-sm-10">
-        <input type="number" class="form-control" name="dia" style="width:200px">
+        <input type="number" class="form-control" name="rango1">
       </div>
     </div>
 	
 	<div class="form-group">
-      <label class="control-label col-sm-2" for="semana">Semana:</label>
+      <label class="control-label col-sm-2" for="rango2">De 4 a 12 dias :</label>
       <div class="col-sm-10">
-        <input type="number" class="form-control" name="semana" style="width:200px">
+        <input type="number" class="form-control" name="rango2">
       </div>
     </div>
 	
 	<div class="form-group">
-      <label class="control-label col-sm-2" for="mes">Mes:</label>
+      <label class="control-label col-sm-2" for="rango3">13 dias o mas :</label>
       <div class="col-sm-10">
-        <input type="number" class="form-control" name="mes" style="width:200px">
+        <input type="number" class="form-control" name="rango3">
       </div>
     </div>
 	</div>

@@ -52,7 +52,7 @@ header("location:error.php");
     
 	<div class="panel-body" align="center" style="width:500px; margin:auto">
 	
-	<h2>Agregar usuario</h2>
+	<h2>Agregar producto</h2>
 	
 	<?php
 	/*$servername = "localhost";
@@ -60,19 +60,12 @@ header("location:error.php");
 	$password = "";
 	$dbname = "facturacion";*/
 	
-	if ($_POST['tipo_id'] == "Cedula de ciudadania"){
-	$tipo_id= "1";
-	}else{
-	$tipo_id= "2";
-	}
-	$id=$_POST['id'];
-	$nombre=$_POST['nombre'];
-	$apellido=$_POST['apellido'];
-	$empresa=$_POST['empresa'];
-	$telefono=$_POST['telefono'];
-	$tel_alt=$_POST['tel_alt'];
-	$direccion=$_POST['direccion'];
-	$observaciones=$_POST['observaciones'];
+	
+	$producto=$_POST['producto'];
+	$cantidad=$_POST['cantidad'];
+	$rango1=$_POST['rango1'];
+	$rango2=$_POST['rango2'];
+	$rango3=$_POST['rango3'];
 	
 	include("conectar.php");
 	$conn = conexion();
@@ -89,13 +82,29 @@ header("location:error.php");
 		 die();
 	}*/
 	
-	$sql = "INSERT INTO cliente (tipo_id, id_cliente, nombres, apellidos, empresa, telefono, direccion, telefono_alt, observacion)
-	VALUES ('$tipo_id', '$id', '$nombre', '$apellido', '$empresa', '$telefono', '$direccion', '$tel_alt', '$observaciones')";
+	$sql = "INSERT INTO producto (inventario_inicial, nombre)
+	VALUES ('$cantidad', '$producto')";
 	
 	if (mysqli_query($conn, $sql)) {
-  		 ?> <p>  <img src="img/correcto.png" alt="correcto"/>El cliente fue creado satisfactoriamente</p><?php ;
+  		 ?> <p>  <img src="img/correcto.png" alt="correcto"/>Producto agregado</p><?php ;
+		 
+		 $sql1 = "SELECT cod_producto FROM producto WHERE nombre='$producto'";
+		$result = mysqli_query($conn, $sql1);
+		
+		if (mysqli_num_rows($result) > 0) { 
+		$row = mysqli_fetch_assoc($result);
+		$id_producto = $row["cod_producto"];
+  		 $sql2 = "INSERT INTO valores (id_producto, valor, tiempo, fecha)
+	VALUES ('$id_producto', '$rango1', '1', curdate()),('$id_producto', '$rango2', '2', curdate()),('$id_producto', '$rango3', '3', curdate()) ";
+ 		if (mysqli_query($conn, $sql2)) {
+		?> <p>  <img src="img/correcto.png" alt="correcto"/>Precios guardados</p><?php ;
+		}
+		else{
+		?>  <p> <img src="img/incorrecto.png" alt="No encontrado"/> Error guardando precios:</p> <?php echo mysqli_error($conn); ?> <br> <?php
+		}
+		}
 		} else {
-   		 ?>  <p> <img src="img/incorrecto.png" alt="No encontrado"/> Error creando el nuevo cliente:</p> <?php echo mysqli_error($conn); ?> <br> <?php
+   		 ?>  <p> <img src="img/incorrecto.png" alt="No encontrado"/> Error guardando el producto:</p> <?php echo mysqli_error($conn); ?> <br> <?php
 		}
 
 	mysqli_close($conn);
