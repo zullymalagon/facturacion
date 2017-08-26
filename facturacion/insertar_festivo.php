@@ -60,10 +60,7 @@ header("location:error.php");
 	$password = "";
 	$dbname = "facturacion";*/
 	
-	$fecha1=$_POST['fecha1'];
-	$fecha2=$_POST['fecha2'];
-	$fecha3=$_POST['fecha3'];
-	
+	$fecha=$_POST['fecha'];
 	
 	include("conectar.php");
 	$conn = conexion();
@@ -81,7 +78,7 @@ header("location:error.php");
 	}*/
 	
 	$sql = "INSERT INTO festivos (dia_festivo)
-	VALUES ('$fecha1'),('$fecha2'),('$fecha3')";
+	VALUES ('$fecha')";
 	
 	if (mysqli_query($conn, $sql)) {
   		 ?> <p>  <img src="img/correcto.png" alt="correcto"/>Los dias festivos fueron guardados</p><?php ;
@@ -95,7 +92,7 @@ header("location:error.php");
 	?>
 	            
 				
-    <a href="menu_admin.php" align class="btn btn-info" role="button">Volver al menu</a>
+    <a href="menu_admin.php" align class="btn btn-warning" role="button">Volver al menu</a>
   
 	</div>
 	
